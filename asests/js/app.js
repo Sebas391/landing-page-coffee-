@@ -4,7 +4,13 @@ let header=document.querySelector(".header");
     openMenu.addEventListener("click",()=>{
       navbar.classList.toggle("nav-active");
     });
-    
+  let links = document.querySelectorAll("#link");
+  
+  for (link of links){
+    link.addEventListener("click",()=>{
+      navbar.classList.remove("nav-active");
+    })
+  }
     /* scrollReval */
     // v3
 window.sr = new ScrollReveal();
